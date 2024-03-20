@@ -11,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class FileServiceImplement implements FileService {
+
 	@Value("${file.path}")
 	private String filePath;
 
@@ -19,7 +20,9 @@ public class FileServiceImplement implements FileService {
 
 	@Override
 	public String upload(MultipartFile file) {
-		if(file.isEmpty()) return null;
+		if (file.isEmpty()) {
+			return null;
+		}
 
 		String originalFileName = file.getOriginalFilename();
 		String extension = originalFileName.substring(originalFileName.lastIndexOf("."));
@@ -29,13 +32,13 @@ public class FileServiceImplement implements FileService {
 
 		try {
 			file.transferTo(new File(savePath));
-		} catch (Exception exception){
+		} catch (Exception exception) {
 			exception.printStackTrace();
 			return null;
 		}
 
 		return fileUrl + saveFileName;
- 	}
+	}
 
 	@Override
 	public Resource getImage(String fileName) {
@@ -47,7 +50,6 @@ public class FileServiceImplement implements FileService {
 			exception.printStackTrace();
 			return null;
 		}
-
 		return resource;
 	}
 }

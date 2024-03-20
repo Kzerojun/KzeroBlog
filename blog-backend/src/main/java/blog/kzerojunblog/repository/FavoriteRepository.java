@@ -14,7 +14,6 @@ public interface FavoriteRepository extends JpaRepository<FavoriteEntity, Favori
 
 	FavoriteEntity findByBoardNumberAndUserEmail(Integer boardNumber, String userEmail);
 
-
 	@Query(
 			value = "SELECT " +
 					"U.email AS email, " +

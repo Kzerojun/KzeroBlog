@@ -9,5 +9,4 @@ public interface GetBoardResultSet {
 	String getWriterNickname();
 	String getWriterProfileImage();
 
-
 }

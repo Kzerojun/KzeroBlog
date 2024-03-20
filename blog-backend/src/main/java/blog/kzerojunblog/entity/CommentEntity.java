@@ -16,9 +16,10 @@ import lombok.NoArgsConstructor;
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity(name="comment")
-@Table(name="comment")
+@Entity(name = "comment")
+@Table(name = "comment")
 public class CommentEntity {
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int commentNumber;
@@ -26,7 +27,6 @@ public class CommentEntity {
 	private String writeDatetime;
 	private String userEmail;
 	private int boardNumber;
-
 
 	public CommentEntity(PostCommentRequestDto dto, Integer boardNumber, String email) {
 		Date now = Date.from(Instant.now());
@@ -38,6 +38,5 @@ public class CommentEntity {
 		this.userEmail = email;
 		this.boardNumber = boardNumber;
 	}
-
 
 }

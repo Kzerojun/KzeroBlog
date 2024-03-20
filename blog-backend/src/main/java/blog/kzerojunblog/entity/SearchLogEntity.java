@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity(name = "search_log")
-@Table(name="search_log")
+@Table(name = "search_log")
 public class SearchLogEntity {
 
 	@Id

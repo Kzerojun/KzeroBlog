@@ -77,7 +77,7 @@ public class AuthServiceImplement implements AuthService {
 			String encodedPassword = userEntity.getPassword();
 			boolean isMatched = passwordEncoder.matches(password, encodedPassword);
 
-			if(!isMatched) {
+			if (!isMatched) {
 				return SignInResponseDto.signInFailed();
 			}
 

@@ -33,7 +33,6 @@ public class SearchServiceImplement implements SearchService {
 
 		return GetPopularListResponseDto.success(resultSets);
 	}
-
 	@Override
 	public ResponseEntity<? super GetRelationListResponseDto> getRelationList(String searchWord) {
 

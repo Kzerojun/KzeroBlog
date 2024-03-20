@@ -32,7 +32,6 @@ public class BoardEntity {
 	private int viewCount;
 	private String writerEmail;
 
-
 	public BoardEntity(PostBoardRequestDto dto, String email) {
 
 		Date now = Date.from(Instant.now());
@@ -68,6 +67,5 @@ public class BoardEntity {
 		this.title = dto.getTitle();
 		this.content = dto.getContent();
 	}
-
 
 }

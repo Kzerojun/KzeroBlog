@@ -9,7 +9,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface CommentRepository extends JpaRepository<CommentEntity,Integer> {
+public interface CommentRepository extends JpaRepository<CommentEntity, Integer> {
 
 	@Query(
 			value = "SELECT " +

@@ -2,7 +2,6 @@ package blog.kzerojunblog.entity;
 
 import blog.kzerojunblog.dto.request.auth.SignUpRequestDto;
 import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -25,6 +24,7 @@ public class UserEntity {
 	private String addressDetail;
 	private String profileImage;
 	private Boolean agreedPersonal;
+
 	public UserEntity(SignUpRequestDto dto) {
 		this.email = dto.getEmail();
 		this.password = dto.getPassword();

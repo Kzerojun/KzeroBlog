@@ -34,7 +34,6 @@ public class UserServiceImplement implements UserService {
 			exception.printStackTrace();
 			return ResponseDto.databaseError();
 		}
-
 		return GetSignInUserResponseDto.success(userEntity);
 	}
 
@@ -56,7 +55,7 @@ public class UserServiceImplement implements UserService {
 
 	@Override
 	public ResponseEntity<? super PatchNicknameResponseDto> patchNickname(
-			PatchNicknameRequestDto dto,String email) {
+			PatchNicknameRequestDto dto, String email) {
 		try {
 			UserEntity userEntity = userRepository.findByEmail(email);
 			if (userEntity == null) {
@@ -76,13 +75,12 @@ public class UserServiceImplement implements UserService {
 			exception.printStackTrace();
 			return ResponseDto.databaseError();
 		}
-
 		return PatchNicknameResponseDto.success();
 	}
 
 	@Override
 	public ResponseEntity<? super PatchProfileImageResponseDto> patchProfileImage(
-			PatchProfileImageRequestDto dto,String email) {
+			PatchProfileImageRequestDto dto, String email) {
 
 		try {
 			UserEntity userEntity = userRepository.findByEmail(email);
@@ -98,7 +96,6 @@ public class UserServiceImplement implements UserService {
 			exception.printStackTrace();
 			return ResponseDto.databaseError();
 		}
-
 		return PatchProfileImageResponseDto.success();
 	}
 }

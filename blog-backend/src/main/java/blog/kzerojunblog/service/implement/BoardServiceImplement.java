@@ -163,7 +163,7 @@ public class BoardServiceImplement implements BoardService {
 
 			boolean relation = preSearchWord != null;
 
-			if(relation) {
+			if (relation) {
 				searchLogEntity = new SearchLogEntity(preSearchWord, searchWord, relation);
 				searchLogRepository.save(searchLogEntity);
 			}
@@ -180,13 +180,14 @@ public class BoardServiceImplement implements BoardService {
 	public ResponseEntity<? super GetUserBoardListResponseDto> getUserBoardList(String email) {
 
 		List<BoardListViewEntity> boardListViewEntities;
-		try{
+		try {
 			boolean existedUser = userRepository.existsByEmail(email);
 			if (!existedUser) {
 				return GetUserBoardListResponseDto.noExistUser();
 			}
 
-			boardListViewEntities = boardListViewRepository.findByWriterEmailOrderByWriteDatetimeDesc(email);
+			boardListViewEntities = boardListViewRepository.findByWriterEmailOrderByWriteDatetimeDesc(
+					email);
 
 		} catch (Exception exception) {
 			exception.printStackTrace();
@@ -352,8 +353,6 @@ public class BoardServiceImplement implements BoardService {
 		}
 		return IncreaseViewCountResponseDto.success();
 	}
-
-
 	@Override
 	public ResponseEntity<? super DeleteBoardResponseDto> deleteBoard(Integer boardNumber,
 			String email) {
