@@ -84,3 +84,8 @@
 
 
 ![ERD](/README/project-erd.png)
+
+
+## 트러블 슈팅
+
+링크 : [트러블 슈팅](https://www.notion.so/4c01fea76b6c404ca6989e86c7dda269)
