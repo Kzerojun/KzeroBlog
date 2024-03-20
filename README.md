@@ -11,6 +11,8 @@
 
 ![마이페이지 ](/README/my-page.png)
 
+![검색화면](/README/search.png)
+
 
 ## 📒개발환경
 
