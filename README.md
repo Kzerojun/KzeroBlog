@@ -8,9 +8,9 @@
 
 ---
 
-![홈페이지 메인화면](/README/index.png)
+![홈페이지 메인화면](/README/home-page.png)
 
-![마이페이지 ](/README/mypage.png)
+![마이페이지 ](/README/my-page.png)
 
 ## 📒개발환경
 
@@ -79,7 +79,7 @@
 ---
 
 
-![API 명세서](/README/api.png)
+![API 명세서](/README/project-api.png)
 
 링크 :  [API 명세서](https://www.notion.so/API-479be7760fce4d4fb48f66af287318ea?pvs=21) 
 
@@ -87,4 +87,4 @@
 
 ---
 
-![ERD](/README/erd.png)
+![ERD](/README/project-erd.png)

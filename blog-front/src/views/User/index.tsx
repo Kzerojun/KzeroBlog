@@ -255,7 +255,7 @@ export default function User() {
 
     // event handler : 사이드 카드 클릭 이벤트 처리  //
     const onSideCardClickHandelr = () => {
-      if (isMyPage) navigator(BOARD_PATH() + '/' + BOARD_WRITE_PATH);
+      if (isMyPage) navigator(BOARD_PATH() + '/' + BOARD_WRITE_PATH());
       else if (loginUser) navigator(USER_PATH(loginUser.email));
     }
 
