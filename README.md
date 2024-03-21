@@ -10,6 +10,8 @@
 
 ![마이페이지 ](/README/my-page.png)
 
+![게시글쓰기](/README/write.png)
+
 ![검색화면](/README/search.png)
 
 ![로그인](/README/signin.png)
