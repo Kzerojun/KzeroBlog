@@ -24,7 +24,6 @@ public class AuthServiceImplement implements AuthService {
 	private final PasswordEncoder passwordEncoder;
 	private final JwtProvider jwtProvider;
 
-
 	@Override
 	public ResponseEntity<? super SignUpResponseDto> signUp(SignUpRequestDto dto) {
 		try {
@@ -46,6 +45,7 @@ public class AuthServiceImplement implements AuthService {
 
 			UserEntity userEntity = new UserEntity(dto);
 			userRepository.save(userEntity);
+			log.info("New Sign up :{}",dto.getEmail());
 
 		} catch (Exception exception) {
 			log.error("Error during sign up :", exception);
@@ -80,8 +80,10 @@ public class AuthServiceImplement implements AuthService {
 			if (!isMatched) {
 				return SignInResponseDto.signInFailed();
 			}
+
+			log.info("New Sign in : {}",dto.getEmail());
 			String token = jwtProvider.create(dto.getEmail());
-			return ResponseEntity.ok(SignInResponseDto.success(token));
+			return SignInResponseDto.success(token);
 
 		} catch (Exception exception) {
 			log.error("Error during sign in: ", exception);
