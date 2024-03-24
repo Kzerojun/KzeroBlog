@@ -68,7 +68,7 @@
 
 ### 서비스 아키텍처
 
-[아키텍처](/README/architecture.png)
+![아키텍처](/README/architecture.png)
 
 
 ## 🖥️주요기능
